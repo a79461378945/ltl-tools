@@ -1,7 +1,7 @@
 # ltl-tools
 一些处理ltl公式的工具
 
-## replace_operator
+## <font color=red> replace_operator </font>
 
 - [ ] 输入一般LTL公式，转化为一个等价的封闭算子集合的LTL公式。
     - 一般公式算子集：{0,1,!,&,|,X,F,G,U,W,R, ->}
@@ -48,7 +48,7 @@ a R b  is converted to   !(!(a)U!(b))
 a -> b  is converted to   !((a) & !(b))
 ```
 
-## proof_checker
+## <font color=red> proof_checker </font>
 
 The program is used to verify the output of LTSatP. 
 
@@ -68,7 +68,7 @@ python3 proof_checker.py --trainfile LTSatP-spot-5t20-train.json --testfile LTSa
 
 -t, number of threads the program uses.
 
-## gen_onestep
+## <font color=red> gen_onestep </font>
 
 ### 输入：iclr格式的json文件
 
@@ -100,7 +100,7 @@ python3 gen_onestep.py -f train/Finkbeiner-spot-5t20-test.json -o train/LTSatP-i
 ```
 
 
-## gen_proof
+## <font color=red> gen_proof </font>
 
 ### 输入：iclr格式的json文件
 
@@ -121,7 +121,7 @@ python3 gen_proof.py -f test/Finkbeiner-spot-5t20-test.json -o test/LTSatP-spot-
 ```
 
 
-## n_gentrace
+## <font color=red> n_gentrace </font>
 注意这个py文件同目录下要有temp文件夹,lib文件夹，nuxmv要放在lib里面，且要有运行权限
 
 ### 输入：ltl公式文件
@@ -133,7 +133,7 @@ python3 gen_proof.py -f test/Finkbeiner-spot-5t20-test.json -o test/LTSatP-spot-
 每条数据有：ltl:原始公式，ltl_pre:前缀表达式，trace:使用nuxmv进行生成的路径 或nuxmv_res:表示超时或unsat，ltl_check_res:使用pathchecking对生成路径的检查结果
 
 
-## splitdata
+## <font color=red> splitdata </font>
 
 ### 输入：原始数据集文件
 
@@ -152,7 +152,7 @@ python3 gen_proof.py -f test/Finkbeiner-spot-5t20-test.json -o test/LTSatP-spot-
 多了个步骤：把原始数据集的正常数据里面，被包含在其他测试集的数据给移出，避免训练集混入测试数据
 
 
-## ltl_model_check的check函数
+## <font color=red> ltl_model_check的check函数 </font>
 
 ### 输入：
 
@@ -164,7 +164,7 @@ ltl公式，路径，词汇表
 
 
 
-## ltl_model_check_proof的check函数
+## <font color=red> ltl_model_check_proof的check函数 </font>
 
 ### 输入
 ltl公式，路径，词汇表
